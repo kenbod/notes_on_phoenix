@@ -20,3 +20,10 @@ You also need to install phoenix with this rather esoteric command:
 
 With that, you have all the pieces in place. Note: You will eventually need to make sure that postgres is running in the background
 on your machine.
+
+## Configuring postgres
+
+Phoenix, by default, assumes that it can connect to a Postgres database on the localhost using the account name `postgres` with the password `postgres`. You can login to your running postgres server using the `psql` command. Once inside `psql`, you can type `\?` to get a list of commands that you can use to configure your postgres server. You can change the password for the `postgres` user with the command `\password postgres` and then entering the desired password.
+
+I'm only using this set-up since the server and database we're using will both be located behind a firewall and used only internally. Our database's ports will not be exposed to the public internet.
+
